@@ -1,0 +1,1 @@
+{"name":"guardrail-os","version":"0.3.1","private":true,"description":"Guardrail OS \u2014 deterministic agent action control plane","scripts":{"test":"node tests/policy-engine.test.js && node tests/stage3-approval.test.js && node tests/stage5-6.test.js && node tests/runtime-security.test.js && node tests/app-contract.test.js","serve":"python -m http.server 4173"}}

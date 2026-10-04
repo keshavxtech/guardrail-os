@@ -1,0 +1,12 @@
+const assert=require('assert');
+const fs=require('fs');
+const app=fs.readFileSync('src/app.js','utf8');
+assert(app.includes('function safeRead'));
+assert(app.includes('function pruneExpiredApprovals'));
+assert(app.includes('function togglePause'));
+assert(app.includes("policy:'session-control'"));
+assert(app.includes("current.decision==='BLOCK'"));
+assert(app.includes('state.paused'));
+assert(app.includes('7 registered'));
+assert(!app.includes('3 connected'));
+console.log('App contract/cleanup tests passed.');

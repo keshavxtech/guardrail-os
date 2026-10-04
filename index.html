@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Guardrail OS — Agent Control Plane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+<div class="app shell-app">
+  <aside class="sidebar">
+    <div class="side-brand"><div class="brand-mark">G</div><div><div class="brand">GUARDRAIL <span>OS</span></div><div class="brand-sub">Agent Control Plane</div></div></div>
+    <div class="workspace"><div class="workspace-icon">AC</div><div><strong>Acme Operations</strong><span>Production</span></div><span class="workspace-chevron">⌄</span></div>
+    <div class="side-label">CONTROL PLANE</div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-bottom"><div class="engine-status"><i class="dot"></i><span>Policy engine operational</span><span class="mono">v2.4.1</span></div><div class="side-user"><span class="avatar">MS</span><div><strong>secops-admin</strong><span>Security Operations</span></div></div></div>
+  </aside>
+  <div class="content-shell">
+    <header class="topbar">
+      <div class="top-context"><strong>GUARDRAIL OS</strong><span>/</span><span>Agent Control Plane</span></div>
+      <div class="top-actions"><div class="global-search">⌕ <span>Search</span><kbd>⌘ K</kbd></div><button class="icon-btn" aria-label="Notifications">♧<i></i></button><div class="avatar">MS</div></div>
+    </header>
+    <main><div id="pages"></div><footer><span>Guardrail OS v0.2 • Local control plane</span><span>Environment: prod-us-east-1 • <b class="green">Connected</b></span></footer></main>
+  </div>
+</div>
+<div class="modalback" id="modal"><div class="modal"><div class="modalhead"><strong id="modalTitle">Evaluate action</strong><button class="btn" onclick="closeModal()">Close</button></div><div class="modalbody" id="modalBody"></div><div class="modalfoot" id="modalFoot"></div></div></div>
+<div class="toast" id="toast"><strong id="toastTitle"></strong><span id="toastText"></span></div>
+<script src="src/engine.js"></script>
+<script src="src/runtime.js"></script>
+<script src="src/app.js"></script>
+</body></html>
